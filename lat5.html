@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>javascript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='japa.css'>
+</head>
+<body background="mwm.jpg">
+    <h1 align="center" style="color: grey"></h1>
+    <h1 align="center" style=" color: black">Harap Di isi</h1>
+    <table class="login">
+        <tr>
+            <th><label>Nama Lengkap:</label></th>
+            <th><input type="text" id="nama"></th>
+        </tr>
+        <tr>
+            <th><label>Gender:</label></th>
+            <th><select id="jk">
+                <option value="laki-laki">Laki-Laki</option>
+                <option value="perempuan">Perempuan</option>
+                <option value="Dll">Dll</option>
+            </select></th>
+        <tr>
+            <th><label>Tahun</label></th>
+            <th><select id="Tahun">
+                <option value="l jus">1 Tahun</option>
+                <option value="2 Tahun">2 Tahun</option>
+                <option value="3 Tahun">3 Tahun</option>
+            </select></th>
+            <tr>
+                <th><label>Hafalan</label></th>
+            <th><select id="Hafalan">
+                <option value="l jus">1 jus</option>
+                <option value="15 jus">15 jus</option>
+                <option value="20 jus">20 jus</option>
+            </select></th>
+            </tr>
+        </tr> 
+        </tr>
+             </select>
+    </table>
+
+            <h2 align="center"><input type="submit" onclick="ok()" class="tombol"></h2>
+
+    <hr>
+    <h1 align="center" style="color: #000000">Data anda yang telah di isi</h1>
+    <table class="login" align="center">
+        <tr>
+            <th><label>Nama Anda Adalah :</label></n  th>
+            <th id="tampil_nama"></th>
+        </tr>
+        <tr>
+            <th><label>Gender Anda Adalah :</label></th>
+            <th id="tampil_jk"></th>
+        </tr>
+        <tr>
+            <th><label>Tahun Anda Adalah :</label></th>
+            <th id="tampil_Tahun"></th>
+        </tr>
+        <tr>   
+            <th><label>Hafalan Anda Adalah :</label></th>
+            <th id="tampil_Hafalan"></th>
+        </tr>
+    </table>
+    <script>
+            function ok(){
+                var nama = document.getElementById("nama").value;
+                var Hafalan = document.getElementById("Hafalan").value;
+                var jk = document.getElementById("jk").value;
+                var Tahun = document.getElementById("Tahun").value;
+                document.getElementById("tampil_nama").innerHTML=nama;
+                document.getElementById("tampil_Tahun").innerHTML=Tahun;
+                document.getElementById("tampil_Hafalan").innerHTML=Hafalan;
+                document.getElementById("tampil_jk").innerHTML=jk;
+                if (nama != "" && jk!="" && Hafalan !="" && Tahun!="") {
+                    return true;
+                }else{
+                    alert('Anda Harus Mengisi Data Dengan Lengkap!');
+                }
+         }
+        </script>
+
+        <button><b><a href="hilmi.php" style="color: black">KEMBALI</a></b></button>
+        <button><b><a href="array.php" style="color: black">Nexs</a></b></button>
+</body>
+</html>
